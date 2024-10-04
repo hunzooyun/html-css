@@ -1,0 +1,8 @@
+/* 본문 영역을 선택한 후 글자 크기와 글자 색상을 지정 */
+body {
+  font-size: 1rem;
+  color: green;
+  font-family: "Noto Serif", serif;
+  /* 앞에꺼가 로딩안되면 제네릭으로 들고와야되서 마지막 serif는 제거하면 안됨.*/
+  font-family: "Pretendard Variable", Pretendard, sans-serif;
+}
