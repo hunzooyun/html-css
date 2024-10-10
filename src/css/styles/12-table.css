@@ -1,0 +1,62 @@
+@import "./../../common/modern-reset.css";
+
+body {
+  font-family: "pretendard Variable", Pretendard, sans-serif;
+  margin: 50px;
+}
+
+p {
+  font-size: 1.25rem;
+}
+
+.table-wrapper {
+  block-size: 625px;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+}
+
+/* 테이블 스타일링 */
+.table-styling {
+  border: 1px solid currentColor;
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+  inline-size: 100%;
+
+  .number {
+    inline-size: 10%;
+  }
+
+  .name {
+    inline-size: 20%;
+  }
+
+  .email {
+    inline-size: 40%;
+  }
+
+  .phone {
+    inline-size: 30%;
+  }
+
+  thead {
+    background-color: orange;
+    position: sticky;
+    inset-block-start: 0;
+  }
+
+  thead,
+  th,
+  td {
+    border: 1px solid currentColor;
+    padding: 1em;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: silver;
+  }
+
+  tbody tr {
+    scroll-snap-align: start;
+  }
+}
