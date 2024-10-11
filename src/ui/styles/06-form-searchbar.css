@@ -1,0 +1,106 @@
+@import "./../../../../html-css2/src/common/base.css";
+@import "./../../../../html-css2/src/common/a11y.css";
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+body {
+  margin: 50px;
+}
+
+/* 로고 컴포넌트 */
+.brand {
+  margin: 0;
+  font-size: 1em;
+  font-weight: 400;
+
+  a,
+  svg {
+    display: block;
+  }
+}
+
+/* 검색 버튼 컴포넌트 */
+.button-icon-circle {
+  all: unset;
+
+  svg {
+    display: block;
+  }
+  /* border: 0;
+  padding: 0;
+  background: transparent; */
+}
+
+/* input(search) 컴포넌트 */
+.search {
+  --text-color: #121212;
+  --placeholder-text-color: #ccc;
+
+  display: flex;
+
+  .search__input {
+    background: transparent;
+    border: 0;
+    inline-size: 100%;
+    block-size: 1.25rem;
+    padding: 0.125rem 0.25rem;
+
+    &::placeholder {
+      color: var(--placeholder-text-color);
+    }
+  }
+}
+
+/* 검색바 컴포넌트 */
+.search-bar {
+  --container-size: 285px;
+  --green: #03cc5c;
+  --border-color: var(--green);
+
+  border: 1px solid var(--border-color);
+  border-radius: 50px;
+  padding: 12px 12px 12px 20px;
+  min-inline-size: var(--container-size);
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 12px;
+
+  .brand {
+    flex: 0 0 auto;
+  }
+
+  .search-form {
+    display: flex;
+    flex-flow: row nowrap;
+    flex: 1;
+    align-items: center;
+    gap: 16px;
+
+    .search {
+      flex: 1;
+    }
+
+    button {
+      flex: 0 0 auto;
+    }
+  }
+}
