@@ -1,0 +1,36 @@
+@import "./../../../../html-css2/src/common/base.css";
+.ui_box {
+  background-color: yellow;
+}
+
+.channel_list {
+  display: flex;
+  flex-flow: row wrap;
+  list-style: "";
+  padding-inline-start: 0;
+  margin-block: 0;
+  inline-size: 60%;
+  margin-inline: auto;
+  gap: 1.5em;
+}
+
+.item {
+  flex: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1em;
+  /* align-items: ''; */
+  min-inline-size: 150px;
+}
+
+.thumb,
+.title {
+  display: block;
+  border: 1px solid currentColor;
+}
+
+.image {
+  max-width: 100%;
+  max-inline-size: 100%;
+  display: block;
+}
