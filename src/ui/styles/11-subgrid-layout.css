@@ -1,0 +1,70 @@
+@import "./../../common/modern-reset.css";
+@import "./../../common/base.css";
+
+.container {
+  border: 1px solid red;
+  display: grid;
+  grid-template-columns: 1fr repeat(12, minmax(54px, 1fr)) 1fr;
+  grid-template-rows: repeat(5, auto);
+  gap: 1.5rem;
+
+  .header {
+    background-color: yellow;
+    grid-column: 2 /14;
+    block-size: 12vh;
+  }
+
+  .navigation {
+    background-color: lightblue;
+    grid-column: 1 /-1;
+    display: grid;
+    grid-template-columns: subgrid;
+    block-size: 12vh;
+
+    .main-menu {
+      background-color: lightsalmon;
+      grid-column: 2/14;
+    }
+  }
+
+  .main {
+    background-color: green;
+    grid-column: 2/14;
+    grid-row: 3/5;
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+    row-gap: 1rem;
+
+    section,
+    article {
+      block-size: 25svh;
+    }
+    .book {
+      background-color: pink;
+      grid-column: span 4;
+    }
+    .news {
+      background-color: purple;
+      grid-column: span 8;
+    }
+    .board {
+      background-color: saddlebrown;
+      grid-column: span 4;
+    }
+    .favorite {
+      background-color: gold;
+      grid-column: span 4;
+    }
+    .twitter {
+      background-color: pink;
+      grid-column: span 4;
+    }
+  }
+
+  .footer {
+    background-color: gray;
+    grid-column: 1 /-1;
+    block-size: 12vh;
+  }
+}
