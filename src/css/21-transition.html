@@ -17,11 +17,21 @@
       buttonTransition.addEventListener("click", () => {
         Transitionbox.classList.toggle("is--animation");
       });
+
       const buttonTransform = document.querySelector(".button--transform");
       const Transformbox = document.querySelector(".transform-box");
 
       buttonTransform.addEventListener("click", () => {
         Transformbox.classList.toggle("is--animation");
+      });
+
+      const buttonanimation = document.querySelector(".button--animation");
+      const fadeboxes = document.querySelectorAll(".fade-box");
+
+      buttonanimation.addEventListener("click", () => {
+        fadeboxes.forEach((fadebox) => {
+          fadebox.classList.add("is--animation");
+        });
       });
     </script>
   </head>
@@ -36,6 +46,8 @@
     <div class="transform-box">Transition을 활용한 애니메이션</div>
 
     <h2>Animation 속성을 활용한 애니메이션</h2>
-    <div class="fade-box">CSS 애니메이션</div>
+    <button type="button" class="button--animation">Go! Transform</button>
+    <div class="fade-box fade-box1">CSS 애니메이션</div>
+    <div class="fade-box fade-box2">CSS 애니메이션</div>
   </body>
 </html>
