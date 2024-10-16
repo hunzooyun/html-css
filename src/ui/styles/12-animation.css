@@ -1,0 +1,51 @@
+@import "./../../common/modern-reset.css";
+@import "./../../common/base.css";
+
+.button--burger {
+  inline-size: 100px;
+  block-size: 100px;
+  position: relative;
+  background-color: var(--red);
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+
+  .burger-bar {
+    position: absolute;
+    inset-inline: 0;
+    block-size: 20%;
+    background-color: var(--silver);
+    border-radius: 100px;
+    transition: all 2s;
+  }
+
+  .burger-bar-top {
+    inset-block-start: 0;
+    trans
+  }
+  .burger-bar-middle {
+    inset-block-start: 50%;
+    transform: translateY(-50%);
+  }
+  .burger-bar-bottom {
+    inset-block-start: 100%;
+    transform: translateY(-100%);
+  }
+
+  &:hover {
+    .burger-bar-top{
+      inset-block-start: 50%;
+      transform:translateY(-50%) rotate(45deg) 
+    }
+    
+    
+    .burger-bar-middle {
+      transform: translateX(120%);
+    }
+
+    .burger-bar-bottom{
+      inset-block-start: 50%;
+      transform:translateY(-50%) rotate(-45deg) 
+    }
+  }
+}

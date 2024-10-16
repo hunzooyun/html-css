@@ -25,9 +25,10 @@ h2 {
   align-content: center;
   margin-block: 1rem;
 
-  @media (prefers-reduced-motion){
+  @media (prefers-reduced-motion) {
     animation-play-state: paused;
   }
+
   &.is--animation {
     /* animation-name: fadeEffect;
     animation-duration: 4s;
@@ -40,8 +41,6 @@ h2 {
     &.fade-box2 {
       animation-delay: 2s;
     }
-
-    &
   }
 }
 
