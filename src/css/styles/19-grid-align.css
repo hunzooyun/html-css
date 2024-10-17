@@ -1,33 +1,28 @@
-@import "./../../common/best-reset.css";
+@import "./../../common/mordern-reset.css";
 @import "./../../common/base.css";
-
-body {
-  margin: 50px;
-}
 
 h1 {
   margin-block: 1rem;
 }
 
 .grid-item1 {
-  background-color: yellow;
+  background-color: var(--yellow);
 }
 .grid-item2 {
-  background-color: pink;
+  background-color: var(--pink);
 }
 .grid-item3 {
-  background-color: blue;
+  background-color: var(--blue);
 }
 .grid-item4 {
-  background-color: green;
+  background-color: var(--green);
 }
 
-/* 그리드 박스 */
 .grid-box {
-  border: 1px solid green;
-  background-color: gray;
-  display: grid;
+  border: 1px solid var(--green);
+  background-color: var(--gray);
   position: relative;
+  display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 50px);
   isolation: isolate;
@@ -35,6 +30,7 @@ h1 {
   .grid-item1 {
     grid-row: 1 / span 2;
     grid-column: 1 / span 2;
+    z-index: 1;
   }
 
   .grid-item2 {
@@ -51,7 +47,7 @@ h1 {
 
 /* 그리드 정렬 */
 .grid-wrapper {
-  border: 1px solid red;
+  border: 1px solid var(--red);
   block-size: 400px;
   display: grid;
   grid-template-columns: repeat(5, 200px);
@@ -62,11 +58,12 @@ h1 {
 
   /* justify-content: center;
   align-content: center; */
-  /* block inline 순으로 쓰면 사용 가능 */
-  /* place-content: center; */
+  place-content: center;
 
   .grid-item2 {
     font-size: 1.5rem;
-    align-self: center;
+    /* align-self: center;
+    justify-self: center; */
+    place-self: center;
   }
 }

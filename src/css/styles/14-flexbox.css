@@ -1,12 +1,22 @@
 @import "./../../common/mini-reset.css";
-@import "./../../../../html-css2/src/common/base.css";
+@import "./../../common/base.css";
 
-body {
+body, h1{
   margin: 50px;
 }
 
-.flex-basic {
-  background-color: yellow;
+h2{
+  border: 1px solid currentColor;
+  width: 300px;
+  inline-size: 300px;
+  height: 100px;
+  block-size: 100px;
+  text-align: center;
+  align-content: center;
+}
+
+.flex-basic{
+  background: yellow;
   inline-size: 1000px;
   block-size: 600px;
   margin-block: 20px;
@@ -19,34 +29,33 @@ body {
   /* gap: 20px; */
 }
 
-.flex-item {
+.flex-item{
   background-color: pink;
   /* inline-size: 500px; */
   block-size: 200px;
   flex-basis: 0;
 }
 
-.flex-item:nth-child(odd) {
+.flex-item:nth-child(odd){
   order: 1;
 }
 
-.flex-item1 {
+.flex-item1{
   flex-shrink: 1;
   flex-grow: 1;
-  background-color: lightskyblue;
+  background-color: lightgreen;
 }
-.flex-item2 {
+.flex-item2{
   flex-shrink: 1;
   flex-grow: 1;
-  background-color: green;
+  background-color: aqua;
 }
-.flex-item3 {
+.flex-item3{
   flex-shrink: 1;
   flex-grow: 1;
-  background-color: brown;
+  background-color: sandybrown;
 }
-.flex-item4 {
+.flex-item4{
   flex-shrink: 1;
   flex-grow: 1;
-  background-color: purple;
 }

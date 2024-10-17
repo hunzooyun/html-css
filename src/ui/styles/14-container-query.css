@@ -1,14 +1,6 @@
 @import "./../../common/modern-reset.css";
 @import "./../../common/base.css";
 
-/* 다크모드 설정 */
-@media (prefers-color-scheme: dark) {
-  body {
-    color: white;
-    background-color: gray;
-  }
-}
-
 h1,
 p {
   line-height: 1.5;
@@ -31,8 +23,10 @@ p:not(.card__description) {
 .card {
   display: grid;
   grid-template: "image" "description" / minmax(260px, 1fr);
-  border: 1px solid gray;
+  border: 1px solid var(--gray);
+  background-color: var(--light-silver);
   padding: 1rem;
+  gap: 1rem;
 
   .card__image {
     grid-area: image;
@@ -44,6 +38,10 @@ p:not(.card__description) {
       font-style: italic;
     }
   }
+
+  .card__description {
+    grid-area: description;
+  }
 }
 
 @container (inline-size > 30rem) {
@@ -51,10 +49,12 @@ p:not(.card__description) {
     grid-template: "image description" / 1fr 2fr;
 
     .card__description {
-      font-size: clamp(14px, 2cqi, 20px);
+      /* 크기 변경 확인 필요 */
+      /* font-size: clamp(12px, 10cqi, 30px); */
     }
   }
 }
+
 @container (inline-size > 50rem) {
   .card {
     grid-template: "image description" / 2fr 1fr;
@@ -64,80 +64,28 @@ p:not(.card__description) {
     }
   }
 }
-/* .cards {
-  container-type: inline-size;
-  container-name: cards;
-}
-.card-wrapper {
-  container-type: inline-size;
-  container-name: wrapper;
-}
-.card-floating {
-  container-type: inline-size;
-  container-name: float;
-}
-
-.card {
-  border: 1px solid currentColor;
-  padding: 1rem;
-  display: flex;
-  flex-flow: column nowrap;
-  gap: 1rem;
-
-  .card__image {
-    aspect-ratio: 1/0.67;
-    object-fit: cover;
-  }
-
-  .card__caption {
-    margin-block-start: 0.5rem;
-    text-align: center;
-  }
-} */
 
 /* 카드 레이아웃 */
-
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1rem;
 }
 
-/* @container cards (inline-size > 30rem) {
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+.card-floating {
+  display: flow-root;
 
-    .card__image {
-      inline-size: 100%;
+  .card-wrapper {
+    inline-size: 60%;
+    float: inline-start;
+    margin: 0 1rem 1rem 0;
+  }
+
+  p {
+    font-size: 1.5rem;
+
+    &:nth-of-type(1) {
+      margin-block-start: 0;
     }
   }
 }
-
-@container wrapper (inline-size > 30rem) {
-  .card {
-    flex-direction: row;
-
-    .card__image {
-      flex: 2;
-    }
-    .card__description {
-      flex: 1;
-    }
-  }
-}
-
-@container float (inline-size > 30rem) {
-  .cards {
-    .card {
-      flex-direction: row;
-
-      .card__image {
-        flex: 1;
-      }
-      .card__description {
-        flex: 2;
-      }
-    }
-  }
-} */

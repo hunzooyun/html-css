@@ -1,62 +1,66 @@
-@import "./../../common/modern-reset.css";
+@import "./../../common/mordern-reset.css";
 
-body {
-  font-family: "pretendard Variable", Pretendard, sans-serif;
+body{
+  font-family: "Pretendard Variable", Pretendard, sans-serif;
   margin: 50px;
 }
 
-p {
-  font-size: 1.25rem;
-}
-
-.table-wrapper {
+/* 테이블 스타일링 */
+.table-wrapper{
+  height: 625px;
   block-size: 625px;
   overflow-y: auto;
   scroll-snap-type: y mandatory;
 }
 
-/* 테이블 스타일링 */
-.table-styling {
+.table-styling{
+  table-layout: fixed;
   border: 1px solid currentColor;
   border-collapse: collapse;
   border-spacing: 0;
-  table-layout: fixed;
+  width: 100%;
   inline-size: 100%;
 
-  .number {
+  .number{
     inline-size: 10%;
   }
 
-  .name {
+  .name{
     inline-size: 20%;
   }
 
-  .email {
+  .email{
     inline-size: 40%;
   }
 
-  .phone {
+  .phone{
     inline-size: 30%;
   }
 
-  thead {
-    background-color: orange;
-    position: sticky;
-    inset-block-start: 0;
+  th{
+    background-color: sandybrown;
   }
 
-  thead,
-  th,
-  td {
-    border: 1px solid currentColor;
+  /* table 요소의 border를 상속시켜서 스타일링 */
+  thead, tbody, tr, th, td{
+    border: inherit;
+  }
+
+  th, td{
     padding: 1em;
   }
 
-  tbody tr:nth-child(even) {
+  thead{
+    position: sticky;
+    top: 0;
+    inset-block-start: 0;
+  }
+
+  tbody tr:nth-child(even){
     background-color: silver;
   }
 
-  tbody tr {
+  tbody tr{
     scroll-snap-align: start;
   }
 }

@@ -1,5 +1,7 @@
-# Created by https://www.toptal.com/developers/gitignore/api/node,windows,osx,visualstudiocode
-# Edit at https://www.toptal.com/developers/gitignore?templates=node,windows,osx,visualstudiocode
+# Created by https://www.toptal.com/developers/gitignore/api/node,,windows,,osx,,visualstudiocode
+# Edit at https://www.toptal.com/developers/gitignore?templates=node,,windows,,osx,,visualstudiocode
+
+#!! ERROR:  is undefined. Use list command to see defined gitignore types !!#
 
 ### Node ###
 # Logs
@@ -214,4 +216,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/node,windows,osx,visualstudiocode
+# End of https://www.toptal.com/developers/gitignore/api/node,,windows,,osx,,visualstudiocode

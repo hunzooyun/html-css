@@ -1,4 +1,4 @@
-@import "./../../common/modern-reset.css";
+@import "./../../common/mordern-reset.css";
 @import "./../../common/a11y.css";
 @import "./../../common/base.css";
 
@@ -9,7 +9,7 @@
 
 .container {
   padding: 1rem;
-  border: 1px solid red;
+  border: 1px solid var(--red);
   container-type: inline-size;
   container-name: container;
 }
@@ -29,7 +29,7 @@
   gap: 1rem;
 
   img {
-    aspect-ratio: 1/0.67;
+    aspect-ratio: 1 / 0.67;
     object-fit: cover;
   }
 
@@ -52,6 +52,7 @@
     }
   }
 }
+
 @container wrapper (inline-size > 50rem) {
   .card {
     flex-direction: row;
@@ -61,11 +62,11 @@
     }
 
     p {
-      &:nth-of-type (1) {
+      &:nth-of-type(1) {
         flex: 1;
       }
 
-      &:nth-of-type (2) {
+      &:nth-of-type(2) {
         flex: 2;
       }
     }

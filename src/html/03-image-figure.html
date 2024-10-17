@@ -12,36 +12,36 @@
     </style>
   </head>
   <body>
-    <a href="./../../index.html">start</a>
+    <a href="./../../index.html">처음으로</a>
     <h1>이미지 삽입하기</h1>
-    <!-- 이미지 리소스를 삽입할 때는 img 태그를 사용할 수 있으며 리소스는 src 속성으로 이미지 설명은 alt 속성을 지정 -->
+    <!-- 이미지 리소를 삽입할 때는 img 태그를 사용할 수 있으며 리소스는 src 속성으로 이미지 설명을 alt 속성으로 지정 -->
     <!-- 상대경로 방식으로 이미지 리소스를 지정 -->
     <img
       src="./../assets/food/icecream.webp"
-      alt="벤앤제리스 파인트 아이스크림 6종"
+      alt="벤앤제리스 파인트 아이스크림"
     />
     <!-- 절대경로 방식으로 이미지 리소스를 지정 (Github Pages 호스팅은 절대경로를 지원하지 않음.) -->
     <img
       src="/src/assets/food/icecream.webp"
-      alt="벤앤제리스 파인트 아이스크림 6종"
+      alt="벤앤제리스 파인트 아이스크림"
     />
     <!-- 벡터 이미지 삽입하기 (img 요소를 사용할 경우) -->
     <img
       class="svg-img"
-      src="./../assets/svg/chitchat.svg"
       role="img"
-      alt="메세지"
+      src="./../assets/svg/chitchat.svg"
+      alt="1대1 채팅"
     />
 
     <!-- 벡터 이미지 삽입하기 (svg 요소를 사용할 경우) -->
-    <!-- SVG 요소 내부에 title 제목을 지정한 후 id값을 SVG 요소에 aria-labelledby 속성의 값으로 지정 -->
+    <!-- SVG 요소 내부에 title 요소로 제목을 지정한 후 id값을 SVG 요소에 aria-labelledby 속성의 값으로 지정 -->
     <svg
       class="svg-img"
       viewBox="0 0 40 40"
       xmlns="http://www.w3.org/2000/svg"
       aria-labelledby="message"
     >
-      <title id="message">메시지</title>
+      <title id="message">메세지</title>
       <defs>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a">
           <stop stop-color="#2397B3" offset="0%"></stop>
@@ -70,28 +70,28 @@
       </g>
     </svg>
     <hr />
-    <!-- 피규어 요소를 사용하여 이미지 컨텐츠와 캡션 마크업하기 -->
+    <!-- 피규어 요소를 사용하여 이미지 콘텐츠와 이미지 캡션 마크업 -->
     <figure>
-      <img src="./../assets/drama/culinary-class-wars-wide.jpg" alt="" />
-      <figcaption>흑백요리사</figcaption>
+      <img src="./../assets/drama/culinary-class-wars-narrow.jpg" alt="" />
+      <figcaption>흑백 요리사</figcaption>
     </figure>
-
     <figure>
       <img src="./../assets/drama/good-partner-wide.webp" alt="" />
       <figcaption>굿 파트너</figcaption>
     </figure>
 
-    <!-- Lazy Lading (지연 로딩) -->
+    <!-- Lazy Loading (지연 로딩) -->
+    <!-- img 요소에 width와 height 속성을 지정하면 성능 관점에서 도움이 됨 -->
     <img
       src="./../assets/drama/mon-friend-son-narrow.webp"
-      alt="엄마친구아들"
+      alt="엄마 친구 아들"
       loading="lazy"
       width="284"
       height="398"
     />
     <img
       src="./../assets/drama/mon-friend-son-wide.webp"
-      alt="엄마친구아들"
+      alt="엄마 친구 아들"
       loading="lazy"
       width="341"
       height="192"
